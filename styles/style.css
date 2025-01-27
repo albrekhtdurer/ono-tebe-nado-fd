@@ -1,1 +1,63 @@
 /* место для вашего кода */
+body {
+  background-color: #fff;
+}
+
+/*TODO: понять по ширине */
+
+header,
+main,
+footer {
+  width: 1100px;
+}
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 148px 1fr;
+  align-items: center;
+  min-height: 293px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.menu {
+  grid-column: 1/2;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.menu__item {
+  list-style-type: circle;
+}
+
+.menu__item_active {
+  list-style-type: none;
+}
+
+.link_custom_underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.logo__image {
+  grid-column: 2/3;
+  width: 148px;
+  height: 105px;
+ }
+
+ .contacts {
+  justify-self: end;
+  width: 240px;
+  font-style: normal;
+ }
+
+ .cover {
+  margin-bottom: 180px;
+  min-height: 757px;
+ }

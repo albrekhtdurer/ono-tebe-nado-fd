@@ -4,7 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts/fonts.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item menu__item_active"><a>главная</a></li>
+          <!--TODO: Переназвать класс ссылки и внедрить в контактс-->
+          <li class="menu__item"><a class= "link_custom_underline" href="#0">посмотреть лоты</a></li>
+          <li class="menu__item"><a class= "link_custom_underline" href="#0">об аукционе</a></li>
+        </ul>
+      </nav>
+      <a class="logo">
+        <img class="logo__image" src="./images/logo-black.svg" alt="Надпись 'Оно тебе надо' в рамке">
+      </a>
+      <address class="contacts">
+        <p class="contacts__phone">+9 999 555 5555</p>
+        <p class="contacts__email">info@sobaka.ge</p>
+        <p class="contacts__address">наб. Принсенграхт 263- 265, Амстердам</p>
+      </address>
+    </header>
+    <main>
+      <section class="cover">
+        <!--TODO: подумать над названием класса-->
+        <h1 class="cover__header">
+          <span class="cover__header-start">Оно</span>
+          <span class="cover__header-center">Тебе</span>
+          <span class="cover__header-end">Надо</span>
+        </h1>
+        <div class="description">
+          <!--TODO: проверить параграф и кнопку на необходимость классов-->
+          <p>Аукцион вещей, в которые никто не верил</p>
+          <button>Сделать ставку</button>
+        </div>
+      </section>
+      <section class="lots">
+        <h2>Лоты</h2>
+        <ul>
+          <li class="lots__card">
+            <a class="lots_card_title">
+            <article class="lots_card_description">
+            </article>
+          </li>
+          <li class="lots__card">
+            <a class="lots_card_title">
+            <article class="lots_card_description">
+            </article>
+          </li>
+          <li class="lots__card">
+            <a class="lots_card_title">
+            <article class="lots_card_description">
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="about">
+        <div class="about__logo-container">
+        </div>
+        <div class="about__description">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <address>
+      </address>
+      <nav>
+        <ul>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
