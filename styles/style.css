@@ -15,11 +15,10 @@ footer,
 
 
 header {
-  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 148px 1fr;
-  min-height: 293px;
-  padding: 92px 50px 92px 50px;
+  grid-template-columns: 1fr min-content 1fr;
+  height: 293px;
+  padding: 92px 50px 96px 50px;
   font-size: 18px;
   line-height: 22px;
 }
@@ -32,7 +31,8 @@ header {
 .menu__list {
   display: flex;
   flex-direction: row;
-  gap: 33px;
+  gap: 30px;
+  padding-bottom: 6px;
   font-size: 18px;
   line-height: 21.13px;
 }
@@ -59,8 +59,7 @@ header {
 
 .contacts {
   grid-column: 3/4;
-  padding-top: 5px;
-  padding-left: 1px;
+  padding-top: 3px;
   line-height: 24.3px;
   justify-self: end;
   max-width: 240px;
@@ -74,11 +73,8 @@ header {
 
 .cover {
   position: relative;
-  margin-bottom: 180px;
-  min-height: 757px;
-  padding-top: 165px;
-  padding-left: 50px;
-  padding-right: 50px;
+  height: 757px;
+  padding: 165px 50px 0 50px;
   background-image: url("../images/cover.jpg");
   background-position: center;
   background-size: cover;
