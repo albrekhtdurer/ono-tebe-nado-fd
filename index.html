@@ -13,34 +13,34 @@
     <header>
       <nav class="menu">
         <ul class="menu__list">
-          <li class="menu__item menu__item_active"><a>главная</a></li>
-          <!--TODO: Переназвать класс ссылки и внедрить в контактс-->
-          <li class="menu__item"><a class= "link_custom_underline" href="#0">посмотреть лоты</a></li>
-          <li class="menu__item"><a class= "link_custom_underline" href="#0">об аукционе</a></li>
+          <li class="menu__item menu__item_active"><a>Главная</a></li>
+          <li class="menu__item"><a class= "link__text" href="#0">Посмотреть лоты</a></li>
+          <li class="menu__item"><a class= "link__text" href="#0">Об аукционе</a></li>
         </ul>
       </nav>
       <a class="logo">
         <img class="logo__image" src="./images/logo-black.svg" alt="Надпись 'Оно тебе надо' в рамке">
       </a>
       <address class="contacts">
-        <p class="contacts__phone">+9 999 555 5555</p>
-        <p class="contacts__email">info@sobaka.ge</p>
+        <p class="contacts__phone"><a class= "link__text" href="#0">+9 999 555 5555</a></p>
+        <p class="contacts__email"><a class= "link__text" href="#0">info@sobaka.ge</a></p>
         <p class="contacts__address">наб. Принсенграхт 263- 265, Амстердам</p>
       </address>
     </header>
     <main>
       <section class="cover">
+        <div class="overlay"></div>
         <!--TODO: подумать над названием класса-->
-        <h1 class="cover__header">
-          <span class="cover__header-start">Оно</span>
-          <span class="cover__header-center">Тебе</span>
-          <span class="cover__header-end">Надо</span>
+        <h1 class="cover__title">
+          <span class="cover__title cover__title-start">Оно</span>
+          <span class="cover__title cover__title-center">Тебе</span>
+          <span class="cover__title cover__title-end">Надо</span>
         </h1>
-        <div class="description">
+        <article class="description">
           <!--TODO: проверить параграф и кнопку на необходимость классов-->
-          <p>Аукцион вещей, в которые никто не верил</p>
-          <button>Сделать ставку</button>
-        </div>
+          <p class="description__text">Аукцион вещей, в которые никто не верил</p>
+          <button class="description__button">Сделать ставку</button>
+        </article>
       </section>
       <section class="lots">
         <h2>Лоты</h2>
