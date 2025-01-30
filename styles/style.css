@@ -1,8 +1,8 @@
 /* место для вашего кода */
-body {
-  background-color: #fff;
-}
 
+.block__light {
+  background: #fff;
+}
 /*TODO: понять по ширине */
 
 header,
@@ -14,36 +14,42 @@ footer,
 }
 
 
-header {
+.header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+ /*TODO: подумать, нужен ли height*/
   height: 293px;
   padding: 92px 50px 96px 50px;
-  font-size: 18px;
-  line-height: 22px;
 }
 
-.menu {
+.menu__header {
   grid-column: 1/2;
   align-self: center;
 }
 
-.menu__list {
+.menu__header_list {
   display: flex;
   flex-direction: row;
-  gap: 30px;
-  padding-bottom: 6px;
+  gap: 31px;
+  padding-bottom: 3px;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21.13px;
 }
 
 .menu__item {
   text-transform: lowercase;
-  list-style-type: circle;
+  list-style: circle;
 }
 
 .menu__item_active {
-  list-style-type: none;
+  list-style: none;
+}
+
+.menu__item_link {
+  position: relative;
+  left: 2px;
 }
 
 .link__text {
@@ -51,93 +57,231 @@ header {
   text-underline-offset: 3px;
 }
 
-.logo__image {
+.logo {
+  display: block;
   grid-column: 2/3;
   width: 148px;
+}
+
+.logo__image {
   height: 105px;
 }
 
-.contacts {
-  grid-column: 3/4;
-  padding-top: 3px;
-  line-height: 24.3px;
-  justify-self: end;
-  max-width: 240px;
+address {
+  display: inline;
   font-style: normal;
 }
 
-.contacts__phone,
-.contacts__email {
+.contacts__header {
+  grid-column: 3/4;
+  justify-self: end;
+  padding-bottom: 2px;
+  max-width: 240px;
+  line-height: 24.3px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contacts__link {
   text-wrap: nowrap;
 }
 
 .cover {
   position: relative;
-  height: 757px;
-  padding: 165px 50px 0 50px;
+  margin-bottom: 180px;
+  padding: 165px 50px 50px 50px;
+  color: #fff;
+  text-transform: uppercase;
   background-image: url("../images/cover.jpg");
   background-position: center;
   background-size: cover;
-  color: #fff;
-  text-transform: uppercase;
 }
 
 .overlay {
   position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.6);
-  inset: 0;
 }
 
 .cover__title {
   position: relative;
   z-index: 2;
   display: block;
-  letter-spacing: 0.3em;
-  font-size: 100px;
   font-weight: 700;
+  font-size: 100px;
   line-height: 115px;
+  letter-spacing: 0.3em;
 }
 
-.cover__title-center {
+.cover__title_center {
+  padding-top: 20px;
+  padding-left: 30px;
   text-align: center;
-  margin-top: 20px;
-  margin-left: 30px;
 }
 
-.cover__title-end {
+.cover__title_end {
+  padding-top: 20px;
+  padding-left: 615px;
   text-align: right;
-  margin-top: 20px;
-  margin-left: 615px;
 }
 
 .description {
-  margin-top: 106px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 107px;
 }
 
 .description__text {
   position: relative;
   z-index: 2;
-  font-size: 22px;
   font-weight: 400;
-  text-align: left;
+  font-size: 22px;
   word-spacing: 0.85em;
+  text-align: left;
 }
 
+/* TODO: сбросить стандартные стили для кнопки???? хз */
 .description__button {
   position: relative;
   z-index: 2;
   width: 256px;
   height: 51px;
-  font-size: 22px;
-  font-weight: 500;
+  border: 1px solid #fff;
   color: #fff;
+  font-weight: 500;
+  font-size: 22px;
   text-align: center;
   text-transform: uppercase;
   background: transparent;
-  border: 1px solid #fff;
 
 }
+
+.content__block {
+  margin: 0 24px 0 24px;
+}
+
+.lots {
+  margin-bottom: 120px;
+}
+
+.content__title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46.96px;
+}
+
+.lots__title {
+  padding-left: 40px;
+}
+
+.lots__list {
+  margin-top: 27px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.lots__card {
+  width: 334px;
+  min-height: 596px;
+}
+
+.lots__card_link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.lots__card_content {
+  padding: 48px 40px 48px 40px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #fff;
+  background-position: center;
+  background-repeat: cover;
+}
+
+.lots__card_title {
+  z-index: 2;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.3px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.lots__card_description {
+  z-index: 2;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card_type_film {
+  background-image: url('../images/card-lot-01.jpg');
+}
+
+.card_type_book {
+  background-image: url('../images/card-lot-02.jpg');
+}
+
+.card_type_picture{
+  background-image: url('../images/card-lot-03.jpg');
+}
+
+
+
+.lots__more {
+
+}
+
+
+.about {
+  margin-bottom: 180px;
+}
+
+.about__logo_container {
+
+}
+
+.about__description {
+
+}
+
+.about__description_text {
+
+}
+
+footer {
+  padding: 0 50px 82px 50px;
+}
+.contacts__footer {
+
+}
+
+.menu__footer {
+
+}
+
+.menu__footer_list {
+
+}
+
+.socnets {
+
+}
+
+.socnets__item {
+
+}
+
+
