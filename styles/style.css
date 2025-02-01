@@ -12,7 +12,6 @@ footer,
   max-width: 1100px;
 }
 
-
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -165,7 +164,6 @@ footer,
   text-align: center;
   text-transform: uppercase;
   background: transparent;
-
 }
 
 .content__block {
@@ -245,7 +243,7 @@ footer,
   background-image: url('../images/card-lot-02.jpg');
 }
 
-.card_type_picture{
+.card_type_picture {
   background-image: url('../images/card-lot-03.jpg');
 }
 
@@ -260,7 +258,6 @@ footer,
   text-underline-offset: 5px;
   text-transform: lowercase;
 }
-
 
 .about {
   display: grid;
@@ -344,5 +341,3 @@ footer,
   width: 48px;
   height: 48px;
 }
-
-
