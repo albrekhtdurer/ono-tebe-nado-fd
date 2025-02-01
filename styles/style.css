@@ -1,9 +1,8 @@
 /* место для вашего кода */
 
-.block__light {
+.light__block {
   background: #fff;
 }
-/*TODO: понять по ширине */
 
 header,
 main,
@@ -18,78 +17,73 @@ footer,
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
- /*TODO: подумать, нужен ли height*/
-  height: 293px;
-  padding: 92px 50px 96px 50px;
+  box-sizing: border-box;
+  padding: 92px 50px;
 }
 
-.menu__header {
+.header__menu {
   grid-column: 1/2;
   align-self: center;
-}
-
-.menu__header_list {
-  display: flex;
-  flex-direction: row;
-  gap: 31px;
   padding-bottom: 3px;
 }
 
-.menu__item {
+.header__links-list {
+  display: flex;
+  flex-direction: row;
+  gap: 31px;
+}
+
+.header__links-list-item {
   padding-top: 1px;
   list-style: circle;
 }
 
-.menu__item_active {
+.header__links-list-item_no-bullit {
   list-style: none;
 }
 
-.menu__link {
+.menu-link {
   font-weight: 400;
   font-size: 18px;
-  line-height: 21.13px;
+  line-height: 1.173px;
   text-underline-offset: 4px;
   text-transform: lowercase;
 }
 
-.menu__link_active {
+.menu-link_active {
   text-decoration: none;
 }
 
-.menu__link_inactive {
+.header__menu-link_inactive {
   position: relative;
   left: 2px;
 }
 
-.logo {
+.header__logo {
   display: block;
   grid-column: 2/3;
   width: 148px;
 }
 
-.logo__image {
+.header__logo-image {
   height: 105px;
-}
-
-address {
-  display: inline;
-  font-style: normal;
 }
 
 .contacts {
   font-weight: 400;
   font-size: 18px;
-  line-height: 24.3px;
+  font-style: normal;
+  line-height: 1.35;
 }
 
-.contacts__header {
+.header__contacts {
   grid-column: 3/4;
   justify-self: end;
   max-width: 240px;
   padding-bottom: 2px;
 }
 
-.contacts__link {
+.header__contacts-link {
   text-underline-offset: 4px;
   text-wrap: nowrap;
 }
@@ -120,8 +114,15 @@ address {
   display: block;
   font-weight: 700;
   font-size: 100px;
-  line-height: 115px;
+  line-height: 1.15;
+}
+
+.letter-spacing-extended {
   letter-spacing: 0.3em;
+}
+
+.no-letter-spacing {
+  letter-spacing: normal;
 }
 
 .cover__title_center {
@@ -136,14 +137,14 @@ address {
   text-align: right;
 }
 
-.description {
+.cover__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 107px;
 }
 
-.description__text {
+.cover__description-text {
   position: relative;
   z-index: 2;
   font-weight: 400;
@@ -152,8 +153,7 @@ address {
   word-spacing: 0.85em;
 }
 
-/* TODO: сбросить стандартные стили для кнопки???? хз */
-.description__button {
+.bet-button {
   position: relative;
   z-index: 2;
   width: 256px;
@@ -179,7 +179,7 @@ address {
 .content__title {
   font-weight: 700;
   font-size: 40px;
-  line-height: 46.96px;
+  line-height: 1.174;
   text-transform: uppercase;
 }
 
@@ -187,7 +187,7 @@ address {
   padding-left: 40px;
 }
 
-.lots__list {
+.lots__card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -195,18 +195,18 @@ address {
   list-style: none;
 }
 
-.lots__card {
+.lots__card-list-item {
   width: 334px;
   min-height: 596px;
 }
 
-.lots__card_link {
+.card-link {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-.lots__card_content {
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -219,22 +219,22 @@ address {
   background-size: cover;
 }
 
-.lots__card_title {
+.card__title {
   z-index: 2;
   font-weight: 700;
   font-size: 22px;
-  line-height: 26.3px;
+  line-height: 1.195;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-underline-offset: 2.5px;
   text-transform: uppercase;
 }
 
-.lots__card_description {
+.card__description {
   z-index: 2;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
 }
 
 .card_type_film {
@@ -249,13 +249,13 @@ address {
   background-image: url('../images/card-lot-03.jpg');
 }
 
-.lots__more {
+.lots__look-more-link {
   display:block;
   padding-top: 30px;
   padding-left: 40px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 23.48px;
+  line-height: 1.174;
   text-decoration-thickness: 1px;
   text-underline-offset: 5px;
   text-transform: lowercase;
@@ -270,7 +270,7 @@ address {
   padding-left: 47px;
 }
 
-.about__logo_container {
+.about__logo {
   display: flex;
   grid-column: 1/2;
   justify-self: center;
@@ -282,7 +282,7 @@ address {
   background-color: #000;
 }
 
-.about__logo_image {
+.about__logo-image {
   width: 148px;
   height: 114px;
 }
@@ -293,17 +293,17 @@ address {
   padding-left: 72px;
 }
 
-.about__description_text {
+.about__text {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding-top: 100px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
 }
 
-footer {
+.footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 50px 82px 50px;
@@ -313,26 +313,33 @@ footer {
   grid-column: 1/2;
 }
 
-.menu__footer {
+.footer__menu {
   grid-column: 2/3;
   justify-self: center;
+  padding-top: 4px;
   text-align: center;
 }
 
-.menu__footer_item {
+.footer__links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer__links-list-item {
   list-style-type: none;
 }
 
-.socnets {
-  grid-column: 3/4;
-  list-style-type: none;
+.footer__socnets-list {
   display: flex;
   flex-direction: row;
+  grid-column: 3/4;
   justify-self: end;
   gap: 48px;
+  list-style-type: none;
 }
 
-.socnets__item {
+.footer__socnets-list-item {
   display: block;
   width: 48px;
   height: 48px;
