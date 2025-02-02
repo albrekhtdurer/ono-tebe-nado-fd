@@ -261,7 +261,7 @@ footer,
 
 .about {
   display: grid;
-  grid-template-columns: 596px calc(100%-596px);
+  grid-template-columns: 596px calc(100% - 596px);
   margin-bottom: 180px;
   padding-top: 35px;
   padding-left: 47px;
