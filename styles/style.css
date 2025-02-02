@@ -21,7 +21,6 @@ footer,
 }
 
 .header__menu {
-  grid-column: 1/2;
   align-self: center;
   padding-bottom: 3px;
 }
@@ -60,7 +59,6 @@ footer,
 
 .header__logo {
   display: block;
-  grid-column: 2/3;
   width: 148px;
 }
 
@@ -76,13 +74,12 @@ footer,
 }
 
 .header__contacts {
-  grid-column: 3/4;
   justify-self: end;
   max-width: 240px;
   padding-bottom: 2px;
 }
 
-.header__contacts-link {
+.contacts-link {
   text-underline-offset: 4px;
   text-wrap: nowrap;
 }
@@ -261,15 +258,13 @@ footer,
 
 .about {
   display: grid;
-  grid-template-columns: 596px calc(100% - 596px);
+  grid-template-columns: 334px calc(100% - 334px);
   margin-bottom: 180px;
   padding-top: 35px;
-  padding-left: 47px;
 }
 
 .about__logo {
   display: flex;
-  grid-column: 1/2;
   justify-self: center;
   justify-content: center;
   align-items: center;
@@ -285,9 +280,8 @@ footer,
 }
 
 .about__description {
-  grid-column: 2/3;
   padding-top: 100px;
-  padding-left: 72px;
+  padding-left: 25px;
 }
 
 .about__text {
@@ -306,12 +300,7 @@ footer,
   padding: 0 50px 82px 50px;
 }
 
-.contacts__footer {
-  grid-column: 1/2;
-}
-
 .footer__menu {
-  grid-column: 2/3;
   justify-self: center;
   padding-top: 4px;
   text-align: center;
@@ -330,7 +319,6 @@ footer,
 .footer__socnets-list {
   display: flex;
   flex-direction: row;
-  grid-column: 3/4;
   justify-self: end;
   gap: 48px;
   list-style-type: none;
