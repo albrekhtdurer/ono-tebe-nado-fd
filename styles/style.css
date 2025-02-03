@@ -32,10 +32,10 @@ footer,
 }
 
 .header__links-list-item {
-  padding-top: 1px;
-  list-style: circle;
   position: relative;
   left: 1px;
+  padding-top: 1px;
+  list-style: circle;
 }
 
 .header__links-list-item_no-bullit {
@@ -154,8 +154,8 @@ footer,
 .bet-button {
   position: relative;
   z-index: 2;
-  padding: 12px 32px;
   border: 1px solid #fff;
+  padding: 12px 32px;
   color: #fff;
   font-weight: 500;
   font-size: 22px;
